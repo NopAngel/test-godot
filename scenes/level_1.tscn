@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://cep7ok2dtnhip"]
+
+[ext_resource type="PackedScene" uid="uid://bu1unsp0skg7w" path="res://scenes/floor.tscn" id="1_pgvrt"]
+[ext_resource type="Texture2D" uid="uid://02va8jgq2tdv" path="res://assets/background_treeLarge.png" id="2_nv13d"]
+[ext_resource type="Texture2D" uid="uid://82qd8qfj5kqy" path="res://assets/background_tree.png" id="3_flrny"]
+[ext_resource type="Texture2D" uid="uid://d2x562jyxlthc" path="res://assets/background_cloudB.png" id="4_hoxig"]
+[ext_resource type="Texture2D" uid="uid://cw37cw56epnpd" path="res://assets/background_cloudA.png" id="5_04lhh"]
+[ext_resource type="PackedScene" uid="uid://b1qha32mligly" path="res://scenes/player.tscn" id="6_22udk"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("6_22udk")]
+position = Vector2(68, 388)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(195, -53)
+zoom = Vector2(1.905, 1.905)
+position_smoothing_enabled = true
+position_smoothing_speed = 5.505
+
+[node name="Floor" type="Node2D" parent="."]
+
+[node name="StaticBody2D" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(69, 584)
+
+[node name="StaticBody2D2" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(205, 586)
+
+[node name="StaticBody2D3" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(337, 587)
+
+[node name="StaticBody2D4" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(473, 586)
+
+[node name="StaticBody2D5" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(610, 590)
+
+[node name="StaticBody2D6" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(741, 589)
+
+[node name="StaticBody2D7" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(878, 590)
+
+[node name="StaticBody2D8" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(1010, 590)
+
+[node name="StaticBody2D9" parent="Floor" instance=ExtResource("1_pgvrt")]
+position = Vector2(1143, 587)
+
+[node name="Objects" type="Node2D" parent="."]
+position = Vector2(1, 0)
+
+[node name="BackgroundTreeLarge" type="Sprite2D" parent="Objects"]
+z_index = -100
+z_as_relative = false
+position = Vector2(534, 337)
+scale = Vector2(1.24, 1.24)
+texture = ExtResource("2_nv13d")
+
+[node name="BackgroundTree" type="Sprite2D" parent="Objects"]
+z_index = -100
+z_as_relative = false
+position = Vector2(983, 362)
+scale = Vector2(0.79, 0.79)
+texture = ExtResource("3_flrny")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BackgroundCloudB" type="Sprite2D" parent="Background"]
+position = Vector2(100, 221)
+texture = ExtResource("4_hoxig")
+
+[node name="BackgroundCloudB2" type="Sprite2D" parent="Background"]
+position = Vector2(375, 117)
+texture = ExtResource("4_hoxig")
+
+[node name="BackgroundCloudA" type="Sprite2D" parent="Background"]
+position = Vector2(719, 171)
+texture = ExtResource("5_04lhh")
+
+[node name="BackgroundCloudA2" type="Sprite2D" parent="Background"]
+position = Vector2(957, 93)
+texture = ExtResource("5_04lhh")
